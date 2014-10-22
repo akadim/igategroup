@@ -8,13 +8,7 @@
     
     <!-- Styles -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800" rel="stylesheet" type="text/css"><!-- Google web fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- font-awesome -->
-    <link href="js/dropdown-menu/dropdown-menu.css" rel="stylesheet" type="text/css"><!-- dropdown-menu -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Bootstrap -->
-    <link href="js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css"><!-- Fancybox -->
-    <link href="js/audioplayer/audioplayer.css" rel="stylesheet" type="text/css"><!-- Audioplayer -->
-    <link href="css/style.css" rel="stylesheet" type="text/css"><!-- theme styles -->
-    <link href="rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+    <?php echo $this->Html->css(array('../font-awesome/css/font-awesome.min', '../js/dropdown-menu/dropdown-menu', '../bootstrap/css/bootstrap.min.css', '../js/fancybox/jquery.fancybox.css', '../js/audioplayer/audioplayer.css', '../rs-plugin/css/settings.css', 'style.css')); ?>
 
   </head>
   
@@ -44,7 +38,7 @@
                 
                     <h1 class="k-logo">
                         <a href="index-2.html" title="Home Page">
-                            <img src="img/logo.png" alt="Site Logo" class="img-responsive" style="margin-top: 20px;"/>
+                            <?php echo $this->Html->image("logo.png", array('alt' => 'IGATE GROUP', 'class' => 'img-responsive', 'style' => 'margin-top: 20px;')); ?>
                         </a>
                     </h1>
                     
@@ -319,36 +313,8 @@
     </div><!-- subfooter end -->
 
     <!-- jQuery -->
-    <script src="jQuery/jquery-2.1.1.min.js"></script>
-    <script src="jQuery/jquery-migrate-1.2.1.min.js"></script>
-    
-    <!-- Bootstrap -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    
-    <!-- Drop-down -->
-    <script src="js/dropdown-menu/dropdown-menu.js"></script>
-    
-    <!-- Fancybox -->
-	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="js/fancybox/jquery.fancybox-media.js"></script><!-- Fancybox media -->
-    
-    <!-- Responsive videos -->
-    <script src="js/jquery.fitvids.js"></script>
-    
-    <!-- Audio player -->
-	<script src="js/audioplayer/audioplayer.min.js"></script>
-    
-    <!-- Pie charts -->
-    <script src="js/jquery.easy-pie-chart.js"></script>
-    
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
-    
-    <!-- Theme -->
-    <script src="js/theme.js"></script>
+    <?php echo $this->Html->script(array('../jQuery/jquery-2.1.1.min', '../jQuery/jquery-migrate-1.2.1.min', '../bootstrap/js/bootstrap.min', 'dropdown-menu/dropdown-menu', 'fancybox/jquery.fancybox.pack', 'fancybox/jquery.fancybox-media', 'jquery.fitvids', 'jquery.easy-pie-chart', 'theme', '../rs-plugin/js/jquery.themepunch.plugins.min', '../rs-plugin/js/jquery.themepunch.revolution.min')); ?>
 
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript">
 
 		var revapi;
