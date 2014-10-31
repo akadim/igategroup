@@ -39,11 +39,12 @@
                                     <div class="panel-body">
                                         <ul>
                                             <?php
-                                              $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', intval($filiere['id'])));
+                                              $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', $filiere['id']));
+                                              //print_r($formations);
                                               foreach($formations as $formation) { $formation = current($formation);
                                              ?>
                                               <li>
-                                                   <?php echo $this->Html->link( $formation['name'], array('controller' => 'formations', 'action' => 'show', $formation['id']), array('title' => $formation['name']) ); ?>
+                                                   <?php echo $this->Html->link( $formation['name'], array('controller' => 'formations', 'action' => 'show', $formation['id']), array('title' => $formation['name'], 'escape' => false) ); ?>
                                               </li>
                                             <?php } ?>
                                         </ul>

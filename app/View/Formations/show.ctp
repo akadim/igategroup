@@ -7,8 +7,8 @@
         <figure class="news-featured-image">	
             <?php echo $this->Html->image($formation['image_path'], array('alt' => $formation['name'], 'class' => 'img-responsive')); ?>
         </figure>
-        
-        <h1 class="page-title"><?php echo $formation['name'];  ?></h1>
+
+        <h1 class="page-title"><?php echo $formation['name']; ?></h1>
         <div class="news-body">
             <?php echo $formation['description']; ?>
             <h6>Objectif</h6>
@@ -32,7 +32,14 @@
                 <?php echo $formation['neededDoc']; ?>
             </p>
         </div>
-
+        <center>
+            <?php echo $this->Html->link("<i class='custom-button-icon fa fa-check-square-o'></i>
+                <span class='custom-button-wrap'>
+                    <span class='custom-button-title'>S'inscrire</span>
+                    <span class='custom-button-tagline'>Remplir le formulaire d'inscription</span>
+                </span>
+                <em></em>", array('controller' => 'etudiants', 'action' => 'signup', $formation['id']), array('title' => 'S\'inscrire', 'class' => 'custom-button cb-green', 'width' => '400px', 'escape' => false)); ?>
+        </center>
     </div>
 
 </div><!-- row end --> 

@@ -17,7 +17,7 @@ class FormationsController extends AppController {
     public $uses = array('Filiere', 'Formation');
     
     public function filieres(){
-        $filieres = $this->Filiere->find('all');
+        $filieres = $this->Filiere->find('all', array('conditions' => array('organizer' => 'IGATE')));
         $this->set('filieres', $filieres);  
         return $filieres;
     }
@@ -29,7 +29,7 @@ class FormationsController extends AppController {
     }
     
     public function show($id = null) {
-        $formation = $this->Formation->find('all', array('condition' => array('id' => $id)));
+        $formation = $this->Formation->find('all', array('conditions' => array('Formation.id' => $id), 'recursive' => 1));
         $formation = current($formation);
         $formation = current($formation);
         $this->set('formation', $formation);

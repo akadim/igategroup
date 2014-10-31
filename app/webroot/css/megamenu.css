@@ -1,0 +1,431 @@
+#headerMenu {
+    background: linear-gradient(to right, #dddddd 0%, #ffffff 20%, #ffffff 80%, #dddddd 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-top: 1px solid #ddd;
+    box-shadow: 0 2px 2px 0 #999;
+    box-sizing: border-box;
+    clear: both;
+    height: 43px;
+    position: relative;
+}
+.menuInner, .menuInner2 {
+    margin: auto;
+    width: 974px;
+}
+#navigation, .contentBg ul, DD {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+ul#navigation {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 43px;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    z-index: 3500;
+}
+ul#navigation li, ul#navigation li p, ul#navigation li p a {
+    float: left;
+    height: 100%;
+    margin: 0;
+}
+ul#navigation li {
+    float: left;
+    position: static;
+    z-index: 2;
+}
+ul#navigation li:hover .submenu {
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    z-index: 2000;
+}
+ul#navigation li.top-level.right_text {
+    float: right;
+    position: relative;
+}
+ul#navigation li.top-level.right_text.menuCart {
+    margin-right: 15px;
+}
+ul#navigation li.top-level.right_text.menuCart p span.shoppingCartIcon {
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -221px -38px rgba(0, 0, 0, 0);
+    float: left;
+    height: 15px;
+    margin: 0 8px auto -6px;
+    width: 15px;
+}
+ul#navigation li.top-level.right_text div.submenu {
+    float: right;
+    left: auto !important;
+    right: 0;
+    width: auto !important;
+}
+ul#navigation li.top-level.right_text div.submenu .menuPad {
+    padding: 5px 0;
+}
+ul#navigation li.top-level.right_text p a {
+    padding-right: 0;
+}
+ul#navigation li.top-level.right_text div.submenu dl dd a, ul#navigation li.top-level.right_text div.submenu dl dd span {
+    font-size: 13px;
+    padding: 5px 35px 5px 15px;
+    white-space: nowrap;
+}
+ul#navigation li.top-level.right_text div.submenu dl dd span {
+    color: #555555;
+}
+ul#navigation li.top-level p a {
+    box-sizing: border-box;
+    clear: both;
+    color: #444;
+    display: block;
+    font-size: 13px;
+    height: 27px;
+    padding: 12px 15px 0;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0s;
+    z-index: 2;
+}
+ul#navigation li.top-level:hover p a, ul#navigation li.top-level p a:hover {
+    color: #1f4f82;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #eeeeee;
+}
+ul#navigation li.top-level p a b {
+    border-color: #333333 transparent -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 4px 4px 0;
+    display: inline-block;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 0;
+}
+ul#navigation li.top-level:hover p a b {
+    border-top-color: #1f4f82;
+}
+ul#navigation li .headerSearchBox {
+    box-sizing: content-box;
+    clear: both;
+    display: block;
+    height: 27px;
+    padding: 8px 15px 3px 0;
+    position: relative;
+    z-index: 999999;
+}
+.headerSearchBoxLable {
+    position: absolute;
+    top: -999px;
+}
+ul#navigation li .headerSearchBox input.headerSearchBox_text {
+    background-color: #f8f8f8;
+    border: 1px solid #bbb;
+    border-radius: 12px 0 0 12px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-sizing: border-box;
+    color: #777;
+    float: left;
+    font-size: 11px;
+    height: 24px;
+    margin: 0;
+    padding: 1px 0 1px 9px;
+    transition: all 0.15s ease-out 0s;
+    width: 166px;
+}
+ul#navigation li .headerSearchBox input.headerSearchBox_text:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+ul#navigation li .headerSearchBox a.xSearchButton {
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -197px -35px #f8f8f8;
+    border: 1px solid #bbb;
+    border-radius: 0 12px 12px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    box-sizing: border-box;
+    float: left;
+    height: 24px;
+    margin-left: -1px;
+    overflow: hidden;
+    text-indent: -9999px;
+    transition: all 0.15s ease-out 0s;
+    width: 26px;
+}
+ul#navigation li .headerSearchBox a.xSearchButton:hover {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+ul#navigation div.submenu {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: linear-gradient(to bottom, #ffffff 50%, #eeeeee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-color: #666 #b7b7b7 #b7b7b7;
+    border-image: none;
+    border-radius: 0 0 5px 5px;
+    border-right: 1px solid #b7b7b7;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.4);
+    display: block;
+    font-weight: normal;
+    left: 0;
+    margin-top: 43px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(0px, 5px);
+    transition: all 0.2s ease 0s;
+    visibility: hidden;
+    z-index: 1000;
+}
+ul#navigation div.submenu .menuPad {
+    padding: 15px 0 20px;
+}
+ul#navigation li.top-level div.submenu a {
+    border: medium none;
+    display: block;
+    font-size: 11px;
+}
+.mTop20 {
+    margin-top: 20px !important;
+}
+ul#navigation li.top-level div.submenu div.columns {
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-bottom: 20px;
+    min-height: 240px;
+    padding: 3px 0;
+    width: 194px;
+}
+ul#navigation li.top-level div.submenu div.columns.noborder {
+    border: medium none;
+}
+ul#navigation li.top-level div.submenu dl {
+    font-size: 11px;
+    margin: 0;
+}
+ul#navigation li.top-level div.submenu dl dt {
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 9px;
+    padding-left: 12px;
+}
+ul#navigation li.top-level div.submenu dl dt a {
+    color: #555;
+    font-size: 12px;
+    padding: 0;
+    text-decoration: none;
+}
+ul#navigation li.top-level div.submenu dl dt a:hover {
+    color: #1f4f82;
+    text-decoration: underline;
+}
+ul#navigation li.top-level div.submenu dl dd {
+    font-size: 11px;
+    text-indent: 0;
+}
+ul#navigation li.top-level div.submenu dl dd a, ul#navigation li.top-level div.submenu dl dd span {
+    color: #1f4f82;
+    display: block;
+    padding: 4px 0 4px 12px;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+}
+ul#navigation li.top-level div.submenu dl dd a.sub2_sub {
+    padding: 3px 0 3px 22px;
+}
+ul#navigation li.top-level div.submenu dl dd a:hover, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 a:hover, ul#navigation li.top-level div.submenu #mosaicHead_cert_pillar li .submenu2 li .submenu3 a:hover {
+    background-color: #5c94c4;
+    color: #fff;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar h2 {
+    background-color: #fff;
+    border-bottom: medium none;
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    margin: 0 0 9px;
+    padding: 0 0 0 12px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar ul {
+    float: left;
+    margin: 0;
+    padding-left: 0;
+    width: 194px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li {
+    clear: both;
+    float: none;
+    font-size: 11px;
+    list-style: none outside none;
+    padding: 0;
+    transition: all 0.2s ease 0s;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li a {
+    color: #1f4f82;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: all 0.2s ease 0s;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li a b {
+    font-size: 11px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li a:hover b {
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+    border-top: 4px solid transparent;
+    float: right;
+    height: 0;
+    margin-right: -3px;
+    margin-top: 3px;
+    width: 0;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 {
+    background: linear-gradient(to bottom, #ffffff 50%, #eeeeee 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #b7b7b7;
+    border-radius: 3px;
+    box-shadow: 0 6px 6px -3px #aaa;
+    display: none;
+    font-weight: normal;
+    left: 0;
+    min-height: 200px;
+    min-width: 150px;
+    padding: 15px 0;
+    top: 0;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 {
+    margin-left: 190px;
+    margin-top: 15px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 {
+    margin-left: 194px;
+    margin-top: -10px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2.onecol, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3.onecol {
+    width: 200px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2.twocol, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3.twocol {
+    width: 401px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2.twocol ul, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3.twocol div {
+    border-right: 1px solid #ccc;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2.twocol ul.noborder, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3.twocol div.noborder {
+    border: medium none;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 ul {
+    width: 200px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 div {
+    float: left;
+    width: 200px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li:hover, ul#navigation li.top-level div.submenu #mosaicHead_pillar li.pillarAllProduct:hover {
+    background: none repeat scroll 0 0 #5c94c4;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li:hover {
+    background: none repeat scroll 0 0 #5c94c4;
+    position: relative;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li:hover div ul li a, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li:hover div a {
+    color: #1f4f82;
+    transition: all 0.2s ease 0s;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li:hover a, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li:hover a {
+    color: #fff;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 h3, ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 h3 {
+    background-color: #fff;
+    border-bottom: medium none;
+    color: #555;
+    font-size: 12px;
+    margin: 0 0 7px 12px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li:hover .submenu2 {
+    display: block;
+    position: absolute;
+    z-index: 2200;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li:hover .submenu3 {
+    display: block;
+    position: absolute;
+    z-index: 2400;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 a {
+    padding: 5px 12px;
+}
+#breadCrumb {
+    background: linear-gradient(to right, rgba(136, 136, 136, 0.5) 0%, rgba(187, 187, 187, 0.1) 20%, rgba(187, 187, 187, 0.1) 80%, rgba(136, 136, 136, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #e4e4e4;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+#breadCrumb .breadCrumb_left_txt {
+    color: #333333;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+}
+#breadCrumb .breadCrumb_left_txt a, #breadCrumb .breadCrumb_left_txt a:visited, .menuInner2 a, .menuInner2 a:visited, .menuInner2 a:active, .menuInner2 {
+    color: #333333;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0s;
+}
+.menuInner2 a {
+    display: inline-block;
+    margin-top: 8px;
+}
+#breadCrumb .breadCrumb_left_txt a:hover, .menuInner2 a:hover {
+    text-shadow: 0 0 3px #999999;
+}
+#breadCrumb .breadCrumb_right_txt {
+    color: #333333;
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 0 0 20px;
+    position: relative;
+}
+#breadCrumb .breadCrumb_right_txt b {
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -237px -38px rgba(0, 0, 0, 0);
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 15px;
+}
+#breadCrumb .breadCrumb_right_txt.LiveChatBlock {
+    margin-left: 15px;
+    padding-left: 24px;
+}
+#breadCrumb .breadCrumb_right_txt.LiveChatBlock b {
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -253px -38px rgba(0, 0, 0, 0);
+    height: 15px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 19px;
+}
+#breadCrumb .breadCrumb_right_txt a {
+    color: red;
+    margin-top: 0;
+}
+* html ul#navigation li .headerSearchBox input.headerSearchBox_text {
+    height: 22px;
+    padding-top: 3px;
+}
+* html #headerMenu {
+    margin-top: 0;
+    padding-top: 13px;
+}
