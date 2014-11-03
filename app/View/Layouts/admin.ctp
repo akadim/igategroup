@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>IGATE GROUP | <?php echo $this->fetch('pageTitle'); ?></title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        <?php echo $this->Html->css(array('admin/bootstrap.min', 'admin/font-awesome.min', 'admin/ionicons.min', 'admin/AdminLTE'))?>
-
+        <?php echo $this->Html->css(array('admin/bootstrap.min', 'admin/font-awesome.min', 'admin/ionicons.min', 'admin/AdminLTE', 'admin/datatables/dataTables.bootstrap')); ?>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -291,24 +291,52 @@
                     <ul class="sidebar-menu">
                         <li class="active">
                             <a href="../index.html">
-                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="widgets.html">
-                                <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
+                                <i class="fa fa-dashboard"></i> <span>Tableau de bord</span>
                             </a>
                         </li>
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-bar-chart-o"></i>
-                                <span>Charts</span>
+                                <i class="fa fa-th"></i> 
+                                <span>Formation Continue</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Catégorie', array('controller' => 'trainCategories', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Rubrique', array('controller' => 'trainTopics', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Formation', array('controller' => 'trainings', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Méthode de formation', array('controller' => 'trainingMethods', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Session de formation', array('controller' => 'trainingSessions', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-th"></i> 
+                                <span>Certification</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Catégorie', array('controller' => 'trainCategories', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Rubrique', array('controller' => 'trainTopics', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Certification', array('controller' => 'trainings', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
+                                <li>
+                                    <?php echo $this->Html->link('<i class="fa fa-angle-double-right"></i>Session de certification', array('controller' => 'trainingSessions', 'action' => 'index', 'admin' => true), array('escape' => false)); ?>
+                                </li>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -413,18 +441,17 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        <?php echo $this->fetch('pageTitle'); ?>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li class="active"><?php echo $this->fetch('pageTitle'); ?></li>
                     </ol>
                 </section>
 
                 <!-- Main content -->
                 <section class="content">
-
+                   <?php echo $this->fetch('content'); ?>
 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
@@ -432,8 +459,9 @@
 
         
         <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         
-        <?php echo $this->Html->script(array('admin/bootstrap.min', 'admin/AdminLTE/app', 'admin/AdminLTE/demo')); ?>
+        <?php echo $this->Html->script(array('admin/bootstrap.min', 'admin/AdminLTE/app', 'admin/AdminLTE/demo', 'admin/plugins/datatables/jquery.dataTables', 'admin/plugins/datatables/dataTables.bootstrap', 'admin/plugins/ckeditor/ckeditor', 'admin/igategroup')); ?>
     </body>
 </html>

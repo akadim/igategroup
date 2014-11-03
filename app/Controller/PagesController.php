@@ -78,4 +78,8 @@ class PagesController extends AppController {
 	public function presentation() {
 	    
 	}
+        
+        public function admin_index(){
+            
+        }
 }
