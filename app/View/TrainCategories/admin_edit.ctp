@@ -20,6 +20,7 @@ Cat&eacute;gories
                         <?php echo $this->Form->input('active', array('type' => 'checkbox', 'label' => false)); ?>&nbsp;&nbsp;<label>Active</label>
                     </div>
                     <div class="box-footer">
+                        <?php echo $this->Form->input('id'); ?>
                         <?php echo $this->Form->submit('Valider', array('class' => 'btn btn-primary')); ?>
                     </div>
                 </div><!-- /.box-body -->

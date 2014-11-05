@@ -7,13 +7,14 @@
  */
 
 /**
- * Description of TrainingMethod
+ * Description of Registration
  *
  * @author ragnarok
  */
 App::uses('AppModel', 'Model');
-class TrainingMethod extends AppModel{
+class TrainRegistration  extends AppModel {
     //put your code here
     
-    public $hasMany = "TrainingMethodDetail";
+    public $belongsTo = array("TrainingSession", "Client");
+    
 }

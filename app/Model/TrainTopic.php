@@ -17,4 +17,18 @@ class TrainTopic extends AppModel {
     
     public $belongsTo = "TrainCategory";
     public $hasMany = "Training";
+    
+    public $validate = array(
+        'name' => array(
+            'rule' => 'notEmpty',
+            'message' => "le champs 'libellé' est requis",
+            'required' => false
+        ),
+        
+        'train_category_id' => array(
+            'rule' => 'notEmpty',
+            'message' => "le champs 'Catégorie' est requis",
+            'required' => true
+        )
+    );
 }

@@ -462,6 +462,6 @@
          <script src="//code.jquery.com/jquery-1.10.2.js"></script>
          <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         
-        <?php echo $this->Html->script(array('admin/bootstrap.min', 'admin/AdminLTE/app', 'admin/AdminLTE/demo', 'admin/plugins/datatables/jquery.dataTables', 'admin/plugins/datatables/dataTables.bootstrap', 'admin/plugins/ckeditor/ckeditor', 'admin/igategroup')); ?>
+        <?php echo $this->Html->script(array('admin/bootstrap.min', 'admin/AdminLTE/app', 'admin/AdminLTE/demo', 'admin/plugins/datatables/jquery.dataTables', 'admin/plugins/datatables/dataTables.bootstrap', 'admin/plugins/ckeditor/ckeditor', 'admin/plugins/input-mask/jquery.inputmask', 'admin/plugins/input-mask/jquery.inputmask.date.extensions', 'admin/plugins/input-mask/jquery.inputmask.extensions', 'admin/igategroup')); ?>
     </body>
 </html>

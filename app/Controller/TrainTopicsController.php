@@ -16,7 +16,10 @@ App::uses('TrainTopic', 'Model');
 class TrainTopicsController extends AppController {
 
     //put your code here
-
+  
+    public function admin_traintopics() {
+        return $this->TrainTopic->find('list', array('fields' => array('id', 'name')));
+    }
 
     public function admin_index() {
         $topics = $this->TrainTopic->find('all');
@@ -24,15 +27,6 @@ class TrainTopicsController extends AppController {
     }
 
     public function admin_edit($id = null) {
-        if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
-        }
-
-        $topic = array();
-
-        if ($id != -1)
-            $topic = $this->TrainTopic->findById($id);
-
         if ($this->request->is(array('put', 'post'))) {
             if ($this->TrainTopic->save($this->request->data)) {
                 if ($id != -1) {
@@ -43,8 +37,10 @@ class TrainTopicsController extends AppController {
                 return $this->redirect(array('action' => 'index', 'admin' => true));
             }
         }
+
+        $this->TrainTopic->id = $id;
         if (!$this->request->data) {
-            $this->request->data = $topic;
+            $this->request->data = $this->TrainTopic->read();
         }
     }
 
@@ -55,7 +51,7 @@ class TrainTopicsController extends AppController {
     }
 
     public function admin_view($id = null) {
-        $this->set('category', $this->TrainTopic->findById($id));
+        $this->set('topic', $this->TrainTopic->findById($id));
         $this->layout = false;
     }
 

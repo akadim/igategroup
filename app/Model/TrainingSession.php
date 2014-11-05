@@ -15,7 +15,6 @@ App::uses('AppModel', 'Model');
 class TrainingSession extends AppModel{
     //put your code here
     
-    public $belongsTo = "Training";
-    public $belongsTo = "Location";
-    public $hasMany = "Registration";
+    public $belongsTo = array("Training", "Location") ;
+    public $hasMany = "TrainRegistration";
 }

@@ -26,7 +26,12 @@ $(function(){
                     "bInfo": true,
                     "bAutoWidth": false
                 });
+     $(".datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+     if(CKEDITOR) CKEDITOR.replace('editor1');
+     if(CKEDITOR) CKEDITOR.replace('editor2');
+     if(CKEDITOR) CKEDITOR.replace('editor3');
+     if(CKEDITOR) CKEDITOR.replace('editor4');
+     if(CKEDITOR) CKEDITOR.replace('editor5');
      
-     if(CKEDITOR) CKEDITOR.replace('editor1');           
 });
 

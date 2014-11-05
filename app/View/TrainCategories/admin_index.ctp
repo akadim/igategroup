@@ -9,7 +9,7 @@ Cat&eacute;gories
             </div><!-- /.box-header -->
             <div class="box-body table-responsive">
                 <?php echo $this->Session->flash(); ?>
-                <?php echo $this->Html->link('<i class="fa fa-plus"></i> Ajouter une catégorie', array('admin' => true, 'action' => 'edit', -1), array('class' => 'btn btn-info', 'escape' => false)); ?>
+                <?php echo $this->Html->link('<i class="fa fa-plus"></i> Ajouter une catégorie', array('admin' => true, 'action' => 'edit'), array('class' => 'btn btn-info', 'escape' => false)); ?>
                 <br><br>
                 <table id="example2" class="table table-bordered table-hover">
                     <thead>

@@ -17,6 +17,10 @@ class TrainCategoriesController extends AppController {
 
     //put your code here
 
+    
+    public function admin_categories(){
+        return $this->TrainCategory->find('list', array('fields' => array('id','name')));
+    }
 
     public function admin_index() {
         $categories = $this->TrainCategory->find('all');
@@ -24,14 +28,6 @@ class TrainCategoriesController extends AppController {
     }
 
     public function admin_edit($id = null) {
-        if (!$id) {
-            throw new NotFoundException(__('Invalid post'));
-        }
-
-        $category = array();
-
-        if ($id != -1)
-            $category = $this->TrainCategory->findById($id);
 
         if ($this->request->is(array('put', 'post'))) {
             if ($this->TrainCategory->save($this->request->data)) {
@@ -43,8 +39,10 @@ class TrainCategoriesController extends AppController {
                 return $this->redirect(array('action' => 'index', 'admin' => true));
             }
         }
+        
+        $this->TrainCategory->id = $id;
         if (!$this->request->data) {
-            $this->request->data = $category;
+            $this->request->data = $this->TrainCategory->read();
         }
     }
 
