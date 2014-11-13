@@ -22,10 +22,22 @@ class FormationsController extends AppController {
         return $filieres;
     }
     
+    public function all_filieres(){
+        $filieres = $this->Filiere->find('list', array('fields' => array('id', 'libelle')));
+        $this->set('filieres', $filieres);  
+        return $filieres;
+    }
+    
     public function formations($filiere_id){
         $formations = $this->Formation->find('all', array('conditions' => array('filiere_id' => $filiere_id)));
         $this->set('formations', $formations);  
         return $formations;
+    }
+    
+    public function formations_list($filiere_id){
+        $this->layout = false;
+        $formations = $this->Formation->find('list', array('fields' => array('id', 'name'), 'conditions' => array('filiere_id' => $filiere_id)));
+        $this->set('formations', $formations);  
     }
     
     public function show($id = null) {

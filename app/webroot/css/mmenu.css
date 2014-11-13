@@ -1,0 +1,414 @@
+ @media screen and (max-width: 974px) { 
+.clear {clear: both !important;}
+.mmenuH, .muserH {cursor:pointer; display:inline-block; background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll 100% -38px rgba(0, 0, 0, 0);}
+.mmenuH {float:left; background-position:100% -56px;}
+.muserH {float:right;background-position:-336px -56px;}
+.mmenu, .muser {
+    display: inline-block;
+    height: 18px;
+    width: 16px;
+    margin:18px 24px 15px;
+}
+.mmenu, .muser {background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -35px -36px rgba(0, 0, 0, 0);}
+.mmenu {background-position:-306px -37px;}
+.muser {background-position:-273px -38px;}
+.mmenuH:hover .mmenu {background-position: -322px -37px;}
+.muserH:hover .muser {background-position: -290px -38px;}
+.mmenuH:hover, .muserH:hover {background-color:#f3f3f3;}
+
+.mmenuH.active .mmenu {background-position: -322px -37px;}
+.muserH.active .muser {background-position: -290px -38px;}
+.mmenuH.active, .muserH.active {background-color:#f3f3f3;}
+
+body {margin:0; min-width:100%;}
+#ou_header_top_main2 {z-index: 2900; height: 60px;}
+.menuInner, #headerTop, #breadCrumb {display: none;}
+#content {width: 100% !important;}
+#headerMenu {height:56px; position:fixed; z-index:1999; box-shadow:0 1px 3px 0 #BBBBBB; width: 100%; left: 0; top: 0;}
+.responseMenu {display:block;}
+.responseMenu .mlogo {
+    margin: 12px 15px 0;
+    float: left;
+    height: 33px; width: 108px;
+    background: url("/education/ou_rd14/image/ou_logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+}
+#page {float: none; left: 0; width: 100%;}
+.greyBarBottom {display:none;}
+.footer {
+    text-align:center;
+    background: #eaeaea;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VhZWFlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top,  #eaeaea 0%, #ffffff 80%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(80%,#ffffff));
+    background: -webkit-linear-gradient(top,  #eaeaea 0%,#ffffff 80%);
+    background: -o-linear-gradient(top,  #eaeaea 0%,#ffffff 80%);
+    background: -ms-linear-gradient(top,  #eaeaea 0%,#ffffff 80%);
+    background: linear-gradient(to bottom,  #eaeaea 0%,#ffffff 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#ffffff',GradientType=0 );
+    background-color \*:#ffffff\9; *background-color:#ffffff;
+    margin-top:0; margin-bottom: 50px;
+}
+.infoCompany {clear: both; display: inline-block; float: none; margin:20px auto auto; padding:0 10px 15px;}
+.footerContent {display:inline-block; float:none; font-size:12px; margin:auto; text-align:inherit; padding:0 20px;}
+.footerContent a, .footerContent a:link, .footerContent a:visited {color:#1F4F82; font-size:12px; padding:0 3px; line-height:25px;}
+.footerContent a:hover {color:#1F4F82; text-decoration:underline;}
+.footer0 {margin: 10px auto; width: auto; display: table; float: none;}
+.footer0 div {margin-right: 15px;}
+.footer0 div:first-child {margin-right: 0;} 
+
+/* mMenu style */
+#mmenuData {
+    position:fixed; 
+    width:100%; max-width:400px; height: 100%;
+    top:0px; left:0; 
+    overflow: hidden;
+    background-color: white;
+    -moz-box-shadow:2px 0 4px #BBBBBB; -webkit-box-shadow:2px 0 4px #BBBBBB; box-shadow:2px 0 4px #BBBBBB;
+    border-right: 1px solid #BBBBBB;
+    z-index: 1889;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: translate(-103%, 0); -webkit-transform: translate(-103%, 0); transform: translate(-103%, 0);
+    -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out;
+}
+#mmenuData.active {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+.mSearch {margin-top: 60px; display: block; position: relative;}
+.groupHeadContent {
+    display: block; position: relative;
+    -ms-transform: translate(-103%, 0); -webkit-transform: translate(-103%, 0); transform: translate(-103%, 0);
+    -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in;
+}
+#mmenuData.active .groupHeadContent {
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+.mSearch i {
+    position: absolute;
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -200px -38px transparent;
+    height: 15px; width: 15px;
+    left: 15px; top: 11px;
+}
+.mSearch input {
+    border: 0; height: 38px; display: block; width: 100%; padding-left: 40px; color: #444444; font-size: 15px;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+div.groupHead {
+    display: block; float: left;
+    width: 32%; height: 45px;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+div.groupHead:hover {background-color: #444444;}
+div.groupHead a {color: white; font-weight: bold; display: block;}
+div.groupHead a:hover {text-decoration: none;}
+div.groupHead i {display: block; height: 18px; width: 27px; margin: 6px auto 3px; background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll 0 0 transparent;}
+div.groupHead.g1 {margin-left: 2%; border-radius: 3px 0 0 3px;}
+div.groupHead.g3 {border-radius: 0 3px 3px 0;}
+div.groupHead.active {background-color: #CC0000; cursor: default;}
+div.groupHead.active a {cursor: default;}
+div.groupHead.g1 i {background-position: 0px -55px;}
+div.groupHead.g2 i {background-position: -28px -55px;}
+div.groupHead.g3 i {background-position: -56px -55px;}
+
+div.top-level {
+    background-color: white; position: absolute; display: block; float: left; overflow: hidden; width: 100%;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: translate(-103%, 0); -webkit-transform: translate(-103%, 0); transform: translate(-103%, 0);
+    -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out;
+}
+div.top-level.active {-moz-opacity: 1; -khtml-opacity: 1; opacity: 1;}
+#mmenuData.active div.top-level.active {
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+div.top-level .menuPad {height: auto; overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling:touch; background-color: #FFFFFF;}
+div.top-level .menuPad::-webkit-scrollbar {-webkit-appearance: none;}
+div.top-level .menuPad::-webkit-scrollbar:vertical {width: 17px;}
+div.top-level .menuPad::-webkit-scrollbar:horizontal {height: 17px;}
+div.top-level .menuPad::-webkit-scrollbar-thumb {border-radius: 8px; border: 2px solid white; background-color: rgba(255,255,255,0.9); -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9); }
+div.top-level .menuPad::-webkit-scrollbar-track {background-color: #FFFFFF; border-radius: 8px; -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9);} 
+div.top-level .menuPad div.topHead {margin: 20px 5% 5px; display: block;}
+div.top-level .menuPad div.topHead a {font-size: 18px; color: #cc0000; font-weight: bold;}
+div.top-level .menuPad .columns {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease-in; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; transition: all 0.3s ease-in;
+}
+div.top-level .menuPad .columns.inactive {
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    visibility: hidden;
+}
+div.top-level .menuPad .columns h1, #muserData .menuPad2 h1, #muserData .menuPad3 h1 {
+    border-bottom: 2px solid #CC0000;
+    color: #333333;
+    font-size: 15px;
+    margin: 20px 5% 5px;
+    padding-bottom: 5px;
+}
+div.top-level .menuPad .columns h1 a {color: #333333;}
+div.top-level .menuPad .columns h1 a:hover {text-decoration: none;}
+div.top-level .menuPad .columns dl,
+#muserData .menuPad2 dl, #muserData .menuPad3 dl {
+    margin: 0 5%; 
+    -ms-transform: translate(-103%, 0); -webkit-transform: translate(-103%, 0); transform: translate(-103%, 0);
+    -webkit-transition: all 0.4s ease-in; -moz-transition: all 0.4s ease-in; -o-transition: all 0.4s ease-in; transition: all 0.4s ease-in;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#muserData .menuPad2 dl {-ms-transform: translate(103%, 0); -webkit-transform: translate(103%, 0); transform: translate(103%, 0);}
+#mmenuData.active div.top-level.active .menuPad .columns dl,
+#muserData.active .menuPad2 dl {-ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);}
+div.top-level .menuPad .columns dd a, #muserData .menuPad2 dd a, #muserData .menuPad2 dd p, #muserData .menuPad3 dd a, #muserData .menuPad3 dd p {
+    display: block;
+    padding: 10px 0;
+    color: #333333; font-size: 15px;
+    border-bottom: 1px dotted #EEEEEE;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#muserData .menuPad2 dd p, #muserData .menuPad3 dd p {text-transform: capitalize; margin: 0;}
+div.top-level .menuPad .columns dd a:hover, #muserData .menuPad2 dd a:hover, #muserData .menuPad3 dd a:hover {
+    text-decoration: none;
+    background:#f3f3f3;
+    background:-moz-linear-gradient(-45deg,  #f3f3f3 0%, #f0f0f0 100%);
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#f3f3f3), color-stop(100%,#f0f0f0));
+    background:-webkit-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:-o-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:-ms-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:linear-gradient(135deg,  #f3f3f3 0%,#f0f0f0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f0f0f0',GradientType=1 );
+    *background-color:#F0F0F0;
+    background-color /*\**/:#F0F0F0\9;
+}
+div.top-level .menuPad .columns ul {
+    margin: 0 5%; padding: 0;
+    -ms-transform: translate(-103%, 0); -webkit-transform: translate(-103%, 0); transform: translate(-103%, 0);
+    -webkit-transition: all 0.4s ease-in; -moz-transition: all 0.4s ease-in; -o-transition: all 0.4s ease-in; transition: all 0.4s ease-in;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#mmenuData.active div.top-level.active .menuPad .columns ul {
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+div.top-level .menuPad .columns ul li {list-style: none outside none;}
+div.top-level .menuPad .columns ul li a {
+    display: block;
+    padding: 10px 0;
+    color: #333333; font-size: 15px;
+    border-bottom: 1px dotted #EEEEEE;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+div.top-level .menuPad .columns ul li a:hover {
+    text-decoration: none;
+    background:#f3f3f3;
+    background:-moz-linear-gradient(-45deg,  #f3f3f3 0%, #f0f0f0 100%);
+    background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#f3f3f3), color-stop(100%,#f0f0f0));
+    background:-webkit-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:-o-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:-ms-linear-gradient(-45deg,  #f3f3f3 0%,#f0f0f0 100%);
+    background:linear-gradient(135deg,  #f3f3f3 0%,#f0f0f0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f0f0f0',GradientType=1 );
+    *background-color:#F0F0F0;
+    background-color /*\**/:#F0F0F0\9;
+}
+div.top-level .menuPad .columns ul li .mmover1, div.top-level .menuPad .columns ul li .mmover2 {
+    height: 39px; width: 49px; 
+    display: block; position: absolute; 
+    right: 0; margin-top: -40px;
+    cursor: pointer;
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll 20px -86px rgba(0, 0, 0, 0);
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+div.top-level .menuPad .columns ul li .mmover2 {height: 44px; width:40px; background-position: -20px -77px; left: -10px; top: -20px; margin-top: 0;}
+div.top-level .menuPad .columns ul li .mmover1:hover, div.top-level .menuPad .columns ul li .mmover2:hover {background-color: #f3f3f3;}
+
+div.top-level .menuPad .columns ul li .submenu2,
+div.top-level .menuPad .columns ul li .submenu2 ul li .submenu3 {
+    background-color: #FFFFFF;
+    display: block;
+    top: -51px; 
+    position: fixed;
+    width: 100%;
+    z-index: 1900;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: translate(-108%, 0); -webkit-transform: translate(-108%, 0); transform: translate(-108%, 0);
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
+}
+div.top-level .menuPad .columns ul li .submenu2 ul li .submenu3 {
+    z-index: 1901; 
+    top: -5px; padding-left: 15px;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+div.top-level .menuPad .columns ul li .submenu2 ul li .submenu3 div a {border-bottom: 1px dotted #EEEEEE;}
+div.top-level .menuPad .columns ul li .submenu2.active,
+div.top-level .menuPad .columns ul li .submenu2.active ul li .submenu3.active {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+
+#mmenuData.active div.top-level.active .menuPad .columns ul li .submenu2 ul,
+#mmenuData.active div.top-level.active .menuPad .columns ul li .submenu2 ul li .submenu3 div {
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: translate(-108%, 0); -webkit-transform: translate(-108%, 0); transform: translate(-108%, 0);
+    -webkit-transition: all 0.4s ease-in; -moz-transition: all 0.4s ease-in; -o-transition: all 0.4s ease-in; transition: all 0.4s ease-in;
+}
+#mmenuData.active div.top-level.active .menuPad .columns ul li .submenu2.active ul,
+#mmenuData.active div.top-level.active .menuPad .columns ul li .submenu2.active ul li .submenu3.active div {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+
+div.top-level .menuPad .columns ul li .submenu2 ul, div.top-level .menuPad .columns ul li .submenu2 ul li .submenu3 ul {margin: 0;}
+div.top-level .menuPad .columns ul li .submenu2 h1, div.top-level .menuPad .columns ul li .submenu2 ul li .submenu3 h1 {margin: 20px 0 5px; padding-left: 30px; position: relative;}
+
+div.top-level .menuPad .columns ul li span.cat1 a,
+div.top-level .menuPad .columns ul li b.right1,
+div.top-level .menuPad .columns ul li .submenu2 ul li span.cat2 a,
+div.top-level .menuPad .columns ul li .submenu2 ul li b.right2 {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
+}
+div.top-level .menuPad .columns ul li b.right1,
+div.top-level .menuPad .columns ul li .submenu2 ul li b.right2 {border-left: 1px dotted #EEEEEE;}
+
+div.top-level .menuPad .columns ul li.hideLi span.cat1 a,
+div.top-level .menuPad .columns ul li.hideLi b.right1,
+div.top-level .menuPad .columns ul li .submenu2 ul li.hideLi span.cat2 a,
+div.top-level .menuPad .columns ul li .submenu2 ul li.hideLi b.right2 {
+    visibility: hidden;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+}
+
+/* mUser style */
+#muserData {
+    position:fixed; 
+    width:100%; max-width:400px; height: 100%;
+    top:0px; right:0; 
+    overflow: hidden;
+    background-color: white;
+    -moz-box-shadow:-2px 0 4px #BBBBBB; -webkit-box-shadow:-2px 0 4px #BBBBBB; box-shadow:-2px 0 4px #BBBBBB;
+    border-right: 1px solid #BBBBBB;
+    z-index: 1889;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: translate(103%, 0); -webkit-transform: translate(103%, 0); transform: translate(103%, 0);
+    -webkit-transition: all 0.2s ease-out; -moz-transition: all 0.2s ease-out; -o-transition: all 0.2s ease-out; transition: all 0.2s ease-out;
+}
+#muserData.active {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    -ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);
+}
+#muserData .menuPad2, #muserData .menuPad3 {height: auto; overflow-y: scroll; overflow-x: hidden; z-index: 2000; -webkit-overflow-scrolling:touch; background-color: #FFFFFF;}
+#muserData .menuPad3 {
+    top: 61px; width: 100%; z-index: 2001; position: absolute;
+    -ms-transform: translate(100%, 0); -webkit-transform: translate(100%, 0); transform: translate(100%, 0);
+    -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; transition: all 0.3s ease-out;
+}
+#muserData .menuPad3 dl {
+    -ms-transform: translate(108%, 0); -webkit-transform: translate(108%, 0); transform: translate(108%, 0); margin-left: 0;
+    -webkit-transition: all 0.4s ease-in; -moz-transition: all 0.4s ease-in; -o-transition: all 0.4s ease-in; transition: all 0.4s ease-in;
+}
+#muserData.active .menuPad3.active, #muserData.active .menuPad3.active dl {-ms-transform: translate(0, 0); -webkit-transform: translate(0, 0); transform: translate(0, 0);}
+
+#muserData .menuPad2::-webkit-scrollbar {-webkit-appearance: none;}
+#muserData .menuPad2::-webkit-scrollbar:vertical {width: 17px;}
+#muserData .menuPad2::-webkit-scrollbar:horizontal {height: 17px;}
+#muserData .menuPad2::-webkit-scrollbar-thumb {border-radius: 8px; border: 2px solid white; background-color: rgba(255,255,255,0.9); -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9); }
+#muserData .menuPad2::-webkit-scrollbar-track {background-color: #FFFFFF; border-radius: 8px; -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9);}
+
+#muserData .menuPad3::-webkit-scrollbar {-webkit-appearance: none;}
+#muserData .menuPad3::-webkit-scrollbar:vertical {width: 17px;}
+#muserData .menuPad3::-webkit-scrollbar:horizontal {height: 17px;}
+#muserData .menuPad3::-webkit-scrollbar-thumb {border-radius: 8px; border: 2px solid white; background-color: rgba(255,255,255,0.9); -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9); }
+#muserData .menuPad3::-webkit-scrollbar-track {background-color: #FFFFFF; border-radius: 8px; -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9);}
+
+#muserData .menuPad3 h1 {margin-left: 0; padding-left: 30px;}
+#muserData .menuPad3 h1 b.left3 {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -20px -77px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: block;
+    height: 39px;
+    margin-top: 0; top: 0;
+    position: absolute;
+    left: -10px;
+    width: 41px;
+}
+#muserData .menuPad3 h1 b.left3:hover {background-color: #f3f3f3}
+
+#muserData p.filler {display: block; height: 61px;}
+#muserData .menuPad2 h1 b.pnoneIcon, #muserData .menuPad2 h1 span.shoppingCartIcon {
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll -237px -38px rgba(0, 0, 0, 0);
+    float: left;
+    height: 15px;
+    margin: 2px 8px auto 0;
+    width: 15px;
+}
+#muserData .menuPad2 h1 span.shoppingCartIcon {background-position: -221px -38px;}
+#muserData .menuPad2 b.right3 {
+    height: 39px; width: 49px; 
+    display: block; position: absolute; 
+    right: 0; margin-top: -40px;
+    cursor: pointer; border-left: 1px dotted #EEEEEE;
+    background: url("/education/ou_rd14/image/imgSpritR.png") no-repeat scroll 20px -86px rgba(0, 0, 0, 0);
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#muserData .menuPad2 b.right3:hover {background-color: #f3f3f3;}
+
+/* search auto suggest */
+#mAutoitems {
+    position: absolute;
+    z-index: 3000;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    padding-bottom: 15px;
+    display: none;
+    overflow-y: scroll;
+     -webkit-overflow-scrolling:touch;
+}
+#mAutoitems::-webkit-scrollbar {-webkit-appearance: none;}
+#mAutoitems::-webkit-scrollbar:vertical {width: 17px;}
+#mAutoitems::-webkit-scrollbar:horizontal {height: 17px;}
+#mAutoitems::-webkit-scrollbar-thumb {border-radius: 8px; border: 2px solid white; background-color: rgba(255,255,255,0.9); -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9); }
+#mAutoitems::-webkit-scrollbar-track {background-color: #FFFFFF; border-radius: 8px; -webkit-box-shadow: inset 0 0 0 rgba(255,255,255,0.9);}
+
+#mAutoitems div.hint_heading, #mAutoitems div#key_holder a, #mAutoitems a {
+    display: block; 
+    font-size: 15px; color: #333333;
+    margin:0 15px; padding:12px 5px;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+#mAutoitems div#key_holder a em, #mAutoitems a em {font-style: normal; color: #CC0000;}
+#mAutoitems div#key_holder a:hover, #mAutoitems a:hover {text-decoration: none; background-color: #f3f3f3;}
+#mAutoitems div.hint_heading {font-weight: bold; margin:-1px 15px 0; padding: 15px 0 5px; border-bottom: 1px solid #cc0000; border-top: 0;}
+#mAutoitems a.hc_more {color: #666666;}
+
+.mSearch .closeMenu {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    background-color: #333333;
+    border: 3px solid #FFFFFF;
+    -moz-border-radius:20px; -webkit-border-radius:20px; border-radius:20px;
+    -moz-box-shadow:0 0 4px 0 #666, 0px 0px 0px 1px #ccc; -webkit-box-shadow:0 0 4px 0 #666, 0px 0px 0px 1px #ccc; box-shadow:0 0 4px 0 #666, 0px 0px 0px 1px #ccc;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 25px;
+    position: absolute;
+    right: 2%;
+    text-align: center;
+    top: 2px;
+    width: 32px;
+    -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;
+    -ms-transform: scale(0, 0); -webkit-transform: scale(0, 0); transform: scale(0, 0);
+    -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; -o-transition: all 0.4s ease-out; transition: all 0.4s ease-out;
+}
+.mSearch .closeMenu.active {
+    -moz-opacity: 1; -khtml-opacity: 1; opacity: 1;
+    -ms-transform: scale(1, 1); -webkit-transform: scale(1, 1); transform: scale(1, 1);
+}
+
+ }
