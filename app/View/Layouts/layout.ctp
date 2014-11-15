@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-
 <html>
-
-
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -13,20 +10,17 @@
         <?php echo $this->Html->css(array('bootstrap', 'jquery-ui', 'layout', 'eduStyleCommon', 'style2')); ?>
         <?php echo $this->Html->script(array('JSUtils', 'JSSerializer', 'BreadcrumbManager', 'igategroup')); ?>
     </head>
-
-
     <body>
 
+        <header id="ou_header_top_main2">
 
-        <div align="center">
-            <div id="ou_header_top_main2">	
-                <div id="headerTop">		
-                    <div id="headerTop_left">			
-                        <a href="/"><?php echo $this->Html->image('logo.gif', array('style' => 'width: 108px; height: 2cm;')); ?></a>		
-                    </div>		
-                </div>	
+            <div id="headerTop">		
+                <div id="headerTop_left">			
+                    <a href="/"><?php echo $this->Html->image('logo.gif', array('style' => 'width: 108px; height: 1.7cm;')); ?></a>		
+                </div>		
+            </div>	
 
-
+            <nav>
                 <div id="headerMenu" class="gradient">	
 
                     <div class="menuInner">
@@ -56,17 +50,138 @@
                             </li>
                             <li class="top-level">
                                 <p>
+                                    <?php echo $this->Html->link('Formation diplômante<b></b>', array('controller' => 'formations', 'action' => 'index'), array('escape' => false)); ?>
+                                </p>
+                                <div class="submenu gradient">
+
+
+                                    <div class="menuPad">
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>IGATE</h2>
+                                            <?php
+                                            $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'filieres'));
+                                            ?>
+                                            <ul>
+                                                <?php foreach ($filieres as $filiere) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $filiere['Filiere']['libelle']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $filiere['Filiere']['libelle']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', $filiere['Filiere']['id']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id'])); ?>
+                                                                    </li>
+                                                                <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                <?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>Licence</h2>
+                                            <?php
+                                            $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
+                                            ?>
+                                            <ul>
+                                                <?php foreach ($organizers as $organizer) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $organizer['Formation']['organizer']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'licences', $organizer['Formation']['organizer']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    </li>
+                                                                <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                <?php } ?>
+
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>Master</h2>
+                                            <?php
+                                            $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
+                                            ?>
+                                            <ul>
+                                                <?php foreach ($organizers as $organizer) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $organizer['Formation']['organizer']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'masters', $organizer['Formation']['organizer']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    </li>
+                                                                <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                <?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>IGATE</h2>
+                                            <?php
+                                            $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'filieres'));
+                                            ?>
+                                            <ul>
+                                                <?php foreach ($filieres as $filiere) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $filiere['Filiere']['libelle']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $filiere['Filiere']['libelle']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', $filiere['Filiere']['id']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id'])); ?>
+                                                                    </li>
+                                                                <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                <?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="top-level">
+                                <p>
                                     <?php echo $this->Html->link('Formation Continue<b></b>', array('controller' => 'trainings', 'action' => 'index'), array('escape' => false)); ?>
                                 </p>
                             </li>
                             <li class="top-level">
                                 <p>
                                     <?php echo $this->Html->link('Certification<b></b>', array('controller' => 'certifications', 'action' => 'index'), array('escape' => false)); ?>
-                                </p>
-                            </li>
-                            <li class="top-level">
-                                <p>
-                                    <?php echo $this->Html->link('Formation diplômante<b></b>', array('controller' => 'formations', 'action' => 'index'), array('escape' => false)); ?>
                                 </p>
                             </li>
                             <li class="top-level">	
@@ -82,27 +197,29 @@
                         </ul>
                     </div>	
                 </div>	
+            </nav>
+            <div id="breadCrumb" class="gradient">
+                <div class="menuInner2">	
+                    <div class="breadCrumb_left_txt">
+                        <?php echo $this->Html->link('<span style="color:red">Home</span>', "/", array('escape' => false)); ?>
+                    </div>	
 
-                <div id="breadCrumb" class="gradient">
-                    <div class="menuInner2">	
-                        <div class="breadCrumb_left_txt">
-                            <?php echo $this->Html->link('<span style="color:red">Home</span>', "/", array('escape' => false)); ?>
-                        </div>	
+                    <!--
+                     <div class="breadCrumb_right_txt LiveChatBlock">	<b></b>
+                         <a href="JavaScript:liveChatWin();">Chat en ligne</a>	
 
-                        <!--
-                         <div class="breadCrumb_right_txt LiveChatBlock">	<b></b>
-                             <a href="JavaScript:liveChatWin();">Chat en ligne</a>	
- 
-                         </div>	
-                        -->
-                    </div>
+                     </div>	
+                    -->
                 </div>
             </div>
+        </header>
 
-        </div>
-
-        <div id="page">
-            <?php echo $this->fetch('content'); ?>
+        <div class="container">
+            <div class="row row-offcanvas row-offcanvas-right">
+                <div class="col-xs-12 col-sm-12">
+                    <?php echo $this->fetch('content'); ?>
+                </div>
+            </div>
         </div>
 
         <div style="clear: both;"></div>
@@ -186,13 +303,13 @@
 
                             <div class="col-md-4">
                                 <span class="footer-title">R&Eacute;SEAUX SOCIAUX<br><br>
-                                <div class="social-media pull-right"> 
-                                    <!--@todo: replace with company social media details--> 
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a target="_blank" href="https://www.facebook.com/Igategroup.ma"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a> 
-                                    <a href="#"><i class="fa fa-google-plus"></i></a> 
-                                </div>
+                                    <div class="social-media pull-right"> 
+                                        <!--@todo: replace with company social media details--> 
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a target="_blank" href="https://www.facebook.com/Igategroup.ma"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a> 
+                                        <a href="#"><i class="fa fa-google-plus"></i></a> 
+                                    </div>
                             </div>
 
                             <div class="col-md-4"></div>
@@ -218,7 +335,6 @@
                 </div>
             </div>
         </footer>
-
 
 
     </body>

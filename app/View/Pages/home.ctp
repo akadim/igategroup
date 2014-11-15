@@ -1,9 +1,8 @@
 <?php echo $this->Html->css('ou-main'); ?>
-<?php echo $this->Html->script(array('eduInclude', 'ou-home-2012_new')); ?>
-<div style="width:100%;" align="center">
+<?php echo $this->Html->script(array('ou-home-2012_new')); ?>
 
-
-    <div id="content" style="float: none; text-align: left; width: 974px;">
+<div class="container" style="width: 848px;">
+    <div class="row">
         <div id="ouMain_container">
             <div id="banner_wrapper">
                 <div class="banner_container">
@@ -154,20 +153,25 @@
             </div>
 
         </div>
+    </div>
 
 
-        <div id="spot_main_container" style="display: block;">
+    <div class="row">
+        <div class="col-xs-6 col-md-3">
             <a href="/pls/web_prod-plq-dad/db_pages.getpage?page_id=755&amp;intcmp=EMEAOUSPOTBAN1" target="_self">
                 <div class="spot-box" style="background:url(img/rubrique_1.gif) no-repeat">
                     <h3 style="font-size: 18px;">Formation dipl&ocirc;mante</h3><h4>Qualification - Technicien<br>Technicien sp&eacute;cialis&eacute;</h4>
                 </div>
             </a>
-
+        </div>
+        <div class="col-xs-6 col-md-3">
             <a href="/pls/web_prod-plq-dad/ou_product_category.getPage?p_cat_id=385&amp;intcmp=EMEAOUSPOTBAN2" target="_self">
                 <div class="spot-box" style="background:url(img/rubrique_2.gif) no-repeat">
                     <h3 style="font-size: 18px;">Partenariat acad&eacute;mique</h3><h4>Licence <br> Master</h4>
                 </div>
             </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
             <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=714&amp;intcmp=EMEAOUSPOTBAN3" target="_self">
                 <span id="image_url3">
 
@@ -175,122 +179,87 @@
                     </div>
                 </span>
             </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
             <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=746&amp;intcmp=EMEAOUSPOTBAN4" target="_self">
                 <div class="spot-box" style="background:url(img/rubrique_4.gif) no-repeat">
                     <h3 style="font-size: 18px;">Formation continue</h3><h4>&Eacute;tudiant - Particulier <br> Professionnel</h4>
                 </div>
             </a>
         </div>
-
-        <!--OU HOME SPOT BANNER  END -->
-
-
-
-        <!-- CONTAINER FOR GET TRAININGS SECTION  - STARTS -->
-
-
-        <div id="ouMain_content">
-
-            <!-- GET TRAINING, GET CERTIFIED, GET CONNECTED - STARTS -->
-
-
-            <div id="ouMain_getTrainings">
-
-
-                <div class="wrapperBox1">
-                    <div class="newRCbox2">
-                        <div class="col">
-                            <h2> 
-                                Formation dipl&ocirc;mante
-                            </h2>
-                            <div class="colContent1">
-                                <p>Choisissez votre formation par niveau</p>
-                                <?php $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'all_filieres')); ?>
-                                <div class="courseSearchHolder">
-                                    <?php echo $this->Form->create('Formation', array('controller' => 'formations', 'action' => 'search')); ?>
-                                    <?php echo $this->Form->input('Filiere.id', array('type' => 'select', 'label' => false, 'options' => $filieres, 'escape' => false, 'id' => 'filiere_filter')); ?><br>
-                                    Formation<br><br>
-                                    <div id="university_training_filter">
-                                        <select name="data[Formation][id]" disabled="disabled">
-                                            <option>choisissez une filière</option>
-                                        </select>
-                                    </div>
-                                    <?php echo $this->Form->end(); ?>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="wrapperBox1">
-                    <div class="newRCbox2">
-                        <div class="col">
-                            <h2> 
-                                <a href="/pls/web_prod-plq-dad/ou_product_category.getAllProductsPage">Rechercher une Certification</a>
-                            </h2>
-                            <div class="colContent1">
-                                <p>Choisissez votre formation par cat&eacute;gorie</p>
-                                <a href="/pls/web_prod-plq-dad/ou_product_category.getAllProductsPage">
-                                    Formation par produit ou par technologie
-                                </a> 
-                                <br>
-                                <a href="/pls/web_prod-plq-dad/db_pages.getpage?page_id=94&amp;intcmp=WWOUTOPBAN1WHYOU">Pourquoi choisir Oracle University&nbsp;?</a>
-                                <br>
-                                <a href="/pls/web_prod-plq-dad/db_pages.getpage?page_id=635">Voir tous les produits</a>
-                                <div class="courseSearchHolder">
-
-                                    <form action="javascript:searchKeyword2();" method="post" name="searchForm2" id="searchForm2">
-                                        <input name="p_search_keyword" id="findaCourse" value="Rechercher un cours" class="fac_inactive" autocomplete="off" title="Rechercher un cours" type="text">
-                                        <input onclick="searchKeyword2();" id="ouMainSearch" value="Rechercher" style="margin-left:187px; margin-top:1px; position:absolute;" type="button">
-                                    </form>
-
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="wrapperBox1">
-                    <div class="newRCbox2">
-                        <div class="col">
-                            <h2> 
-                                <a href="/pls/web_prod-plq-dad/ou_product_category.getAllProductsPage">Rechercher une formation</a>
-                            </h2>
-                            <div class="colContent1">
-                                <p>Choisissez votre formation par cat&eacute;gorie</p>
-                                <a href="/pls/web_prod-plq-dad/ou_product_category.getAllProductsPage">
-                                    Formation par produit ou par technologie
-                                </a> 
-                                <br>
-                                <a href="/pls/web_prod-plq-dad/db_pages.getpage?page_id=94&amp;intcmp=WWOUTOPBAN1WHYOU">Pourquoi choisir Oracle University&nbsp;?</a>
-                                <br>
-                                <a href="/pls/web_prod-plq-dad/db_pages.getpage?page_id=635">Voir tous les produits</a>
-                                <div class="courseSearchHolder">
-
-                                    <form action="javascript:searchKeyword2();" method="post" name="searchForm2" id="searchForm2">
-                                        <input name="p_search_keyword" id="findaCourse" value="Rechercher un cours" class="fac_inactive" autocomplete="off" title="Rechercher un cours" type="text">
-                                        <input onclick="searchKeyword2();" id="ouMainSearch" value="Rechercher" style="margin-left:187px; margin-top:1px; position:absolute;" type="button">
-                                    </form>
-
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-            <!-- GET TRAINING, GET CERTIFIED, GET CONNECTED - ENDS -->
-
-        </div>
-
-        <!-- CONTAINER FOR GET TRAININGS SECTION - ENDS -->
-
     </div>
 
-    <!--OU HOME PAGE MAIN CONTAINER -- ENDS -->
-
+    <!--OU HOME SPOT BANNER  END -->
+    <div class="row">
+        <div class="col-xs-6 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="topic_title">Formation diplômante</h3>
+                    <p>Choisissez le niveau de la formation</p>
+                    <?php $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'all_filieres')); ?>
+                    <?php echo $this->Form->create('Formation', array('controller' => 'formations', 'action' => 'search')); ?>
+                    <?php echo $this->Form->input('Filiere.id', array('type' => 'select', 'label' => false, 'options' => $filieres, 'escape' => false, 'id' => 'filiere_filter')); ?><br>
+                    Formation<br><br>
+                    <div id="university_training_filter">
+                        <select name="data[Formation][id]" disabled="disabled">
+                            <option>choisissez une formation</option>
+                        </select>
+                    </div>
+                    <br />
+                    <center>
+                        <?php echo $this->Form->submit('Valider', array('class' => 'btn btn-primary')); ?>
+                    </center>
+                    <?php echo $this->Form->end(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="topic_title">Formation & Certification</h3>
+                    <p>Choisissez votre formation par niveau</p>
+                    <?php $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'all_filieres')); ?>
+                    <?php echo $this->Form->create('Formation', array('controller' => 'formations', 'action' => 'search')); ?>
+                    <?php echo $this->Form->input('Filiere.id', array('type' => 'select', 'label' => false, 'options' => $filieres, 'escape' => false, 'id' => 'filiere_filter')); ?><br>
+                    Formation<br><br>
+                    <div id="university_training_filter">
+                        <select name="data[Formation][id]" disabled="disabled">
+                            <option>choisissez une formation</option>
+                        </select>
+                    </div>
+                    <br />
+                    <center>
+                        <?php echo $this->Form->submit('Valider', array('class' => 'btn btn-primary')); ?>
+                    </center>
+                    <?php echo $this->Form->end(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3 class="topic_title">Evenement</h3>
+                    <p>Choisissez votre formation par niveau</p>
+                    <?php $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'all_filieres')); ?>
+                    <?php echo $this->Form->create('Formation', array('controller' => 'formations', 'action' => 'search')); ?>
+                    <?php echo $this->Form->input('Filiere.id', array('type' => 'select', 'label' => false, 'options' => $filieres, 'escape' => false, 'id' => 'filiere_filter')); ?><br>
+                    Formation<br><br>
+                    <div id="university_training_filter">
+                        <select name="data[Formation][id]" disabled="disabled">
+                            <option>choisissez une formation</option>
+                        </select>
+                    </div>
+                    <br />
+                    <center>
+                        <?php echo $this->Form->submit('Valider', array('class' => 'btn btn-primary')); ?>
+                    </center>
+                    <?php echo $this->Form->end(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 
 <script type="text/javascript">ou_animate(active, "first");</script>

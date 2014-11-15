@@ -1,11 +1,38 @@
-* {font-family:Arial, Helvetica, sans-serif;}
-body	{background-color:#FFF; margin:10px; padding:0px; color:#222; font-size:12px; min-width:990px;}
-#page{width: 83%; float: left; left: 17%;}
-#page #page{width: 100%;}
-td, th {font-size:12px;}
-#content{float: left; width: 69%;}
-a {color:#1F4F82; text-decoration:none;}
-a:hover {text-decoration:underline;}
+* {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body	{
+    background-color:#FFF;
+    margin:10px;
+    padding:0px;
+    color:#222;
+    font-size:12px;
+    min-width:990px;
+}
+
+
+td, th {
+    font-size:12px;
+}
+
+#content{
+    float: left; 
+    width: 100%;
+}
+
+a {
+    color:#1F4F82; 
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+.topic_title {
+    color: #056EFC;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LEFT NAV STYLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 #newleftnav {clear:left; float:left; font-size:11px; left:0; margin:0; padding:0; width:16%;}
@@ -49,11 +76,27 @@ a:hover {text-decoration:underline;}
 #newleftnav .newRCbox1 #coursesNew a.sub2_sub {padding-left:18px; padding-top:0;}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NEW BOX STYLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-#content {width:75%;}
-#content.noRightBox {width:100%;}
-#contentarea {margin:0 0 15px 15px; padding:0;}
-#rightcontentarea {margin0; padding:0; clear:both; width:100%;}
-#rightbar {width:23%; margin:0; float: right;}
+#content {
+    width:75%;
+}
+#content.noRightBox {
+    width:100%;
+}
+#contentarea {
+    margin:0 0 15px 15px;
+    padding:0;
+}
+#rightcontentarea {
+    margin0;
+    padding:0;
+    clear:both;
+    width:100%;
+}
+#rightbar {
+    width:23%;
+    margin:0;
+    float: right;
+}
 
 #content #contentarea h1 {
     height:43px; 
@@ -532,7 +575,7 @@ ul#navigation li .headerSearchBox a:hover.xSearchButton {
 /*second level*/
 ul#navigation div.submenu {
     font-weight:normal;
-    width:100%; top:0; left:0;
+    /*width:100%;*/ top:0; left:0;
     margin-top:43px; display:none; z-index:1000;
     border:1px solid #b7b7b7; 
     border-top:1px solid #666;
@@ -608,14 +651,25 @@ ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .subme
     background-color /*\**/: #ffffff\9;
     padding:15px 0; 
     border:1px solid #b7b7b7; 
-    -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; 
-    -webkit-box-shadow:0 6px 6px -3px #aaa; -moz-box-shadow:0 6px 6px -3px #aaa; box-shadow:0 6px 6px -3px #aaa;
+    -moz-border-radius:3px; 
+    -webkit-border-radius:3px; 
+    border-radius:3px; 
+    -webkit-box-shadow:0 6px 6px -3px #aaa; 
+    -moz-box-shadow:0 6px 6px -3px #aaa; 
+    box-shadow:0 6px 6px -3px #aaa;
     font-weight:normal; 
-    min-width:150px; min-height:200px; 
+    min-width:150px;
+    min-height:200px; 
     top:0; left:0;
 }
-ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 {margin-top:15px; margin-left:190px;}
-ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 {margin-top:-10px; margin-left:194px;}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 {
+    margin-top:15px;
+    margin-left:190px;
+}
+ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 {
+    margin-top:-10px;
+    margin-left:194px;
+}
 
 ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2.onecol,
 ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3.onecol {width:200px;}
@@ -641,7 +695,9 @@ ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li:hover 
 
 ul#navigation li.top-level div.submenu #mosaicHead_pillar li .submenu2 li .submenu3 a {padding:5px 12px;}
 
+/* MegaMenu created By KADIM Ahmed */
 
+/* ----- End of MegaMenu --------*/
 /* Bread Crumb */
 #breadCrumb {
     width:100%;

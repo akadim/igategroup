@@ -34,6 +34,24 @@ class FormationsController extends AppController {
         return $formations;
     }
     
+    public function organizers(){
+        $formations = $this->Formation->find('all', array('fields' => array('DISTINCT Formation.organizer'),'conditions' => array('Formation.organizer !=' => 'IGATE')));
+        $this->set('formations', $formations);  
+        return $formations;
+    }
+    
+    public function licences($organizer=null){
+        $formations = $this->Formation->find('all', array('conditions' => array('Formation.filiere_id' => 4)));
+        $this->set('formations', $formations);  
+        return $formations;
+    }
+    
+    public function masters($organizer=null){
+        $formations = $this->Formation->find('all', array('conditions' => array('Formation.filiere_id' => 5)));
+        $this->set('formations', $formations);  
+        return $formations;
+    }
+    
     public function formations_list($filiere_id){
         $this->layout = false;
         $formations = $this->Formation->find('list', array('fields' => array('id', 'name'), 'conditions' => array('filiere_id' => $filiere_id)));
