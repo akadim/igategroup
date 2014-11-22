@@ -74,6 +74,10 @@ class PagesController extends AppController {
 			throw new NotFoundException();
 		}
 	}
+        
+        public function index() {
+            $this->layout = false;
+        }
 	
 	public function presentation() {
 	    

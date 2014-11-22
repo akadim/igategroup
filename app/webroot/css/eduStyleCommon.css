@@ -31,7 +31,9 @@ a:hover {
 }
 
 .topic_title {
-    color: #056EFC;
+    color: #1F4F82;
+    text-decoration: none;
+    font-size: 24px;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ LEFT NAV STYLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */

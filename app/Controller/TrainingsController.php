@@ -17,6 +17,12 @@ class TrainingsController extends AppController {
     //put your code here
 
 
+    public function list_trainings($id = null){
+        $this->layout = false;
+        $trainings = $this->Training->find('list', array('fields' => array('id', 'name'), 'conditions' => array('train_topic_id' => $id)));
+        $this->set('trainings', $trainings);
+    }
+    
     public function admin_trainings() {
         return $this->Training->find('list', array('fields' => array('id', 'name')));
     }

@@ -17,6 +17,12 @@ class TrainTopicsController extends AppController {
 
     //put your code here
   
+    public function list_topics($id = null){
+        $this->layout = false;
+        $topics = $this->TrainTopic->find('list', array('fields' => array('id', 'name'), 'conditions' => array('train_category_id' => $id)));
+        $this->set('topics', $topics);
+    }
+    
     public function admin_traintopics() {
         return $this->TrainTopic->find('list', array('fields' => array('id', 'name')));
     }

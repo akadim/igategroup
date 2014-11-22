@@ -22,6 +22,12 @@ class FormationsController extends AppController {
         return $filieres;
     }
     
+    public function other_filieres(){
+        $filieres = $this->Filiere->find('all', array('conditions' => array('organizer' => 'Other'), 'order' => 'Filiere.libelle ASC'));
+        $this->set('filieres', $filieres);  
+        return $filieres;
+    }
+    
     public function all_filieres(){
         $filieres = $this->Filiere->find('list', array('fields' => array('id', 'libelle')));
         $this->set('filieres', $filieres);  
@@ -54,14 +60,23 @@ class FormationsController extends AppController {
     
     public function formations_list($filiere_id){
         $this->layout = false;
-        $formations = $this->Formation->find('list', array('fields' => array('id', 'name'), 'conditions' => array('filiere_id' => $filiere_id)));
+        $formations = $this->Formation->find('list', array('fields' => array('id', 'tag'), 'conditions' => array('filiere_id' => $filiere_id)));
         $this->set('formations', $formations);  
     }
     
-    public function show($id = null) {
+    public function show_formation($id = null) {
         $formation = $this->Formation->find('all', array('conditions' => array('Formation.id' => $id), 'recursive' => 1));
         $formation = current($formation);
         $formation = current($formation);
         $this->set('formation', $formation);
+    }
+    
+    public function show_filiere($id=null) {
+        $filiere = $this->Filiere->find('all', array('conditions' => array('Filiere.id' => $id), 'recursive' => 1));
+        $filiere = current($filiere);
+        $filiere = current($filiere);
+        $formations = $this->formations($filiere['id']);
+        $this->set('filiere', $filiere);
+        $this->set('formations', $formations);
     }
 }

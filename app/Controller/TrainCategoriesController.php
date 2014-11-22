@@ -18,6 +18,14 @@ class TrainCategoriesController extends AppController {
     //put your code here
 
     
+    public function categories(){
+        return $this->TrainCategory->find('all');
+    }
+    
+    public function list_categories(){
+        return $this->TrainCategory->find('list', array('fields' => array('id','name')));
+    }
+    
     public function admin_categories(){
         return $this->TrainCategory->find('list', array('fields' => array('id','name')));
     }
