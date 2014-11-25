@@ -5,15 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>IGATEGROUP</title>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <?php echo $this->Html->css(array('bootstrap.min', 'modern-business', 'style2', 'layout', 'eduStyleCommon', 'jquery-ui')); ?>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <?php echo $this->Html->fetch('css'); ?>
     </head>
     <body>
 
         <header>
 
             <div id="headerTop">		
-                <div id="headerTop_left">			
-                    <a href="/"><?php echo $this->Html->image('logo.gif', array('style' => 'width: 108px; height: 1.7cm;')); ?></a>		
+                <div id="headerTop_left">
+                    <?php echo $this->Html->image('logo.gif', array('url' => array('controller' => 'pages', 'action' => 'index'), 'escape' => false, 'style' => 'width: 108px; height: 1.7cm;')); ?>
                 </div>		
             </div>	
 
@@ -71,7 +72,7 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id'])); ?>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
                                                                     </li>
                                                                 <?php } ?>      
                                                             </ul>
@@ -99,7 +100,7 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
                                                                     </li>
                                                                 <?php } ?>      
                                                             </ul>
@@ -129,7 +130,7 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
                                                                     </li>
                                                                 <?php } ?>      
                                                             </ul>
@@ -157,7 +158,7 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show', $formation['Formation']['id'])); ?>
+                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
                                                                     </li>
                                                                 <?php } ?>      
                                                             </ul>
@@ -198,6 +199,12 @@
             <div id="breadCrumb" class="gradient">
                 <div class="menuInner2">	
                     <div class="breadCrumb_left_txt">
+                        <?php 
+                          echo $this->Html->getCrumbs(' > ', array(
+                                'text' => $this->Html->image('home.png'),
+                                'url' => array('controller' => 'pages', 'action' => 'display', 'index'),
+                                'escape' => false
+                         ));?>
                         <?php echo $this->Html->link('<span style="color:red">Home</span>', "/", array('escape' => false)); ?>
                     </div>	
 
@@ -211,11 +218,15 @@
             </div>
         </header>
 
+       <!--
         <div class="page_body" style="margin-bottom: 15px;">
             <div class="container" style="padding-left: 110px; padding-right: 110px;">
-                <?php echo $this->fetch('content'); ?>
+                
             </div>
         </div>
+        -->
+        
+        <?php echo $this->fetch('content'); ?>
 
         <div class="footer">	
 
@@ -228,7 +239,7 @@
 
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <?php echo $this->Html->script(array('bootstrap.min', 'igategroup')); ?>
+        <?php echo $this->Html->fetch('script'); ?>
     </body>
 
 </html>

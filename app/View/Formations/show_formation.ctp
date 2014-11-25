@@ -1,18 +1,21 @@
 <!-- Image Header -->
-<div class="row">
-    <div class="col-lg-12">
-        <img class="img-responsive" src="http://placehold.it/1200x300" alt="">
+<div class="newRCbox1">
+    <h2 class="formation_heading">
+      <?php echo $formation['name']; ?>
+    </h2>
+    <br>
+    <div class="row">
+      <div class="col-lg-12">
+       <center>
+          <?php echo $this->Html->image($formation['image_path'], array('class' => 'img-responsive img-hover', 'style' => 'width: 850px; height: 200px;')); ?>
+        </center>
+      </div>
     </div>
-</div>
-<br><br>
-<div class="row">
+    <br>
+    
+    <div class="row">
     <div class="col-lg-12 col-xs-3">
         <div class="container_block">
-            <div class="tablHeading">
-                <h2 class="filiere_heading" style="padding-left:12px; font-size:16px;">
-                    <?php echo $formation['name']; ?>
-                </h2>
-            </div>
             <div id="tabInfoDetails">
                <ul>
                    <li><a href="#tabs-1">Description</a></li>
@@ -35,12 +38,19 @@
                     <?php echo $formation['accessCondition']; ?>
                 </div>
                 <div id="tabs-5">
-                    <?php echo h($formation['programme']); ?>
+                    <?php echo $formation['program']; ?>
                 </div>
                 <div id="tabs-6">
                     <?php echo $formation['neededDoc']; ?>
                 </div>
             </div>
+            <?php echo $this->Html->link($this->Html->image('pdf.gif').'&nbsp;<span style="vertical-align: middle;">Télécharger la version PDF</span>', array('controller' => 'formations', 'action' => 'download_formation', $formation['id']), array('escape' => false)); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <?php echo $this->Html->link("S'inscrire", array('controller' => 'students', 'action' => 'signup', $formation['id']), array('escape' => false, )); ?>
         </div>
-    </div>
+     </div>
+   </div>
+    
+    
 </div>
+
+

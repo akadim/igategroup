@@ -60,12 +60,6 @@ h4
     margin-left: -20px;
 }
 
-ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-    background: none;
-    border: 0;
-    color: #555555;
-    font-weight: normal;
-}
 
 /* == home page slider == */
 #carousel-featured  {
@@ -316,12 +310,62 @@ ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-st
 }
 
 .container_block {
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+
 }
 
 .tab_elem {
     padding: 15px 15px 15px;
     border: 1px solid #cccccc;
     border-top: none;
+}
+
+.ui-tabs .ui-tabs-panel {
+    list-style: outside none none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 30px;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: #065f89;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: RED;
+    cursor: text;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.formation_heading {
+    background-image: url("../img/coursetitle-bg.png");
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    height: 45px;
+    padding-top: 3px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0;
+    padding: 10px 10px 0;
+    text-shadow: 2px 2px 2px #cccccc;
+}
+
+.newRCbox1 {
+    background: -moz-linear-gradient(center top , #ffffff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-shadow: 0 15px 14px -6px #ececec;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    padding: 10px 25px;
+}
+
+#tabInfoDetails {
+    margin: 20px;
+    box-shadow: 1px 1px 10px 0 #aaa;
 }
