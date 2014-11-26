@@ -6,7 +6,10 @@
         <title>IGATEGROUP</title>
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-        <?php echo $this->Html->fetch('css'); ?>
+        <?php echo $this->fetch('css'); ?>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <?php echo $this->fetch('script'); ?>
     </head>
     <body>
 
@@ -14,7 +17,7 @@
 
             <div id="headerTop">		
                 <div id="headerTop_left">
-                    <?php echo $this->Html->image('logo.gif', array('url' => array('controller' => 'pages', 'action' => 'index'), 'escape' => false, 'style' => 'width: 108px; height: 1.7cm;')); ?>
+                    <?php echo $this->Html->image('logo.gif', array('url' => array('controller' => 'pages', 'action' => 'display'), 'escape' => false, 'style' => 'width: 108px; height: 1.7cm;')); ?>
                 </div>		
             </div>	
 
@@ -237,9 +240,6 @@
             </center>
         </div>
 
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <?php echo $this->Html->fetch('script'); ?>
     </body>
 
 </html>

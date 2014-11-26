@@ -1,4 +1,5 @@
-<!-- Image Header -->
+<?php $this->extend('../Layouts/container'); ?>
+<?php $this->start('body_content'); ?>
 <div class="newRCbox1">
     <h2 class="formation_heading">
       <?php echo $formation['name']; ?>
@@ -52,5 +53,6 @@
     
     
 </div>
+<?php $this->end(); ?>
 
 

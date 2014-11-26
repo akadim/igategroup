@@ -79,4 +79,9 @@ class FormationsController extends AppController {
         $this->set('filiere', $filiere);
         $this->set('formations', $formations);
     }
+    
+    public function search() {
+       $data = $this->request->data;
+       return $this->render(array('action' => 'show_formations', $data['Formation']['id']));
+    }
 }

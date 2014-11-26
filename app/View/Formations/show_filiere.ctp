@@ -1,3 +1,5 @@
+<?php $this->extend('../Layouts/container'); ?>
+<?php $this->start('body_content'); ?>
 <!-- Image Header -->
 <div class="row">
     <div class="col-lg-12">
@@ -33,3 +35,4 @@
         </div>
     </div>
 </div>
+<?php $this->end(); ?>

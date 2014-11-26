@@ -1,5 +1,5 @@
-<?php echo $this->Html->css(array('eduStyleCommon', 'ou-main')); ?>
-<?php echo $this->Html->script(array('ou-home-2012_new', 'igategroup')); ?>
+<?php echo $this->Html->css(array('eduStyleCommon', 'ou-main'), array('inline' => false)); ?>
+<?php echo $this->Html->script(array('ou-home-2012_new', 'igategroup'), array('inline' => false)); ?>
 <div id="page">
 
 
@@ -227,7 +227,7 @@
                     </div>
 
                     <div id="spot_main_container" style="display: block;">
-                        <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=755&amp;intcmp=EMEAOUSPOTBAN1" target="_self">
+                        <a href="#" target="_self">
                             <div class="spot-box" style="background:url(img/rubrique.png) no-repeat">
                                 <h3>Formation <br>dipl&ocirc;mante</h3>
                                 <h4>
@@ -245,7 +245,7 @@
                             </div>
                         </a>
 
-                        <a href="http://education.oracle.com/pls/web_prod-plq-dad/ou_product_category.getPage?p_cat_id=385&amp;intcmp=EMEAOUSPOTBAN2" target="_self">
+                        <a href="#" target="_self">
 
 
                             <div class="spot-box" style="background:url(img/rubrique.png) no-repeat">
@@ -266,7 +266,7 @@
                         </a>
 
 
-                        <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=714&amp;intcmp=EMEAOUSPOTBAN3" target="_self">
+                        <a href="#" target="_self">
 
 
                             <span id="image_url3">
@@ -288,7 +288,7 @@
                             </span>
                         </a>
 
-                        <a href="http://education.oracle.com/pls/web_prod-plq-dad/db_pages.getpage?page_id=746&amp;intcmp=EMEAOUSPOTBAN4" target="_self">
+                        <a href="#" target="_self">
 
 
                             <div class="spot-box" style="background:url(img/rubrique.png) no-repeat">
