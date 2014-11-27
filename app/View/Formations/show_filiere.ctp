@@ -1,5 +1,8 @@
 <?php $this->extend('../Layouts/container'); ?>
 <?php $this->start('body_content'); ?>
+<?php
+   $this->Html->addCrumb($filiere['libelle'], array('controller' => 'formations', 'action' => 'show_filiere', $filiere['id']));
+?>
 <!-- Image Header -->
 <div class="row">
     <div class="col-lg-12">

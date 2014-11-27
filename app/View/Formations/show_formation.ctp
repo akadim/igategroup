@@ -1,5 +1,9 @@
 <?php $this->extend('../Layouts/container'); ?>
 <?php $this->start('body_content'); ?>
+<?php
+   $this->Html->addCrumb('<span style="color: red;">'.$filiere['libelle'].'</span>', array('controller' => 'formations', 'action' => 'show_filiere', $filiere['id']), array('escape' => false));
+   $this->Html->addCrumb($formation['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['id']), array('escape' => false));
+?>
 <div class="newRCbox1">
     <h2 class="formation_heading">
       <?php echo $formation['name']; ?>
@@ -45,8 +49,8 @@
                     <?php echo $formation['neededDoc']; ?>
                 </div>
             </div>
-            <?php echo $this->Html->link($this->Html->image('pdf.gif').'&nbsp;<span style="vertical-align: middle;">Télécharger la version PDF</span>', array('controller' => 'formations', 'action' => 'download_formation', $formation['id']), array('escape' => false)); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <?php echo $this->Html->link("S'inscrire", array('controller' => 'students', 'action' => 'signup_prospect', $formation['id']), array('escape' => false, )); ?>
+            <?php echo $this->Html->link($this->Html->image('pdf.gif').'&nbsp;<span style="vertical-align: middle;">Télécharger la version PDF</span>', array('controller' => 'formations', 'action' => 'download_formation', $formation['id'].'pdf'), array('escape' => false)); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <?php echo $this->Html->link("S'inscrire", array('controller' => 'students', 'action' => 'signup_prospect', $formation['id']), array('escape' => false)); ?>
         </div>
      </div>
    </div>

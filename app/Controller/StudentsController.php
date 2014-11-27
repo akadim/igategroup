@@ -7,14 +7,14 @@
  */
 
 /**
- * Description of EtudiantsController
+ * Description of StudentsController
  *
  * @author ragnarok
  */
 class StudentsController extends AppController {
     
     public function signup_prospect($id=null){
-        
+        $this->set('formation' , $id);
     }
 
 }

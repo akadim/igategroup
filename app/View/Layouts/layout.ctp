@@ -203,12 +203,11 @@
                 <div class="menuInner2">	
                     <div class="breadCrumb_left_txt">
                         <?php 
-                          echo $this->Html->getCrumbs(' > ', array(
-                                'text' => $this->Html->image('home.png'),
-                                'url' => array('controller' => 'pages', 'action' => 'display', 'index'),
+                          echo $this->Html->getCrumbs('  >  ', array(
+                                'text' => '<span style="color: red;">Home</span>',
+                                'url' => array('controller' => 'pages', 'action' => 'display', 'home'),
                                 'escape' => false
                          ));?>
-                        <?php echo $this->Html->link('<span style="color:red">Home</span>', "/", array('escape' => false)); ?>
                     </div>	
 
                     <!--

@@ -358,8 +358,8 @@ h4
 .newRCbox1 {
     background: -moz-linear-gradient(center top , #ffffff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #cccccc;
-    border-radius: 3px;
-    box-shadow: 0 15px 14px -6px #ececec;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.176);
     margin-bottom: 20px;
     margin-top: 15px;
     padding: 10px 25px;
