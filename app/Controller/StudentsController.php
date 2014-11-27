@@ -11,9 +11,9 @@
  *
  * @author ragnarok
  */
-class EtudiantsController extends AppController {
+class StudentsController extends AppController {
     
-    public function signup($id=null){
+    public function signup_prospect($id=null){
         
     }
 

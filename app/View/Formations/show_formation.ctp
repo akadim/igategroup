@@ -46,7 +46,7 @@
                 </div>
             </div>
             <?php echo $this->Html->link($this->Html->image('pdf.gif').'&nbsp;<span style="vertical-align: middle;">Télécharger la version PDF</span>', array('controller' => 'formations', 'action' => 'download_formation', $formation['id']), array('escape' => false)); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
-            <?php echo $this->Html->link("S'inscrire", array('controller' => 'students', 'action' => 'signup', $formation['id']), array('escape' => false, )); ?>
+            <?php echo $this->Html->link("S'inscrire", array('controller' => 'students', 'action' => 'signup_prospect', $formation['id']), array('escape' => false, )); ?>
         </div>
      </div>
    </div>

@@ -82,6 +82,7 @@ class FormationsController extends AppController {
     
     public function search() {
        $data = $this->request->data;
-       return $this->render(array('action' => 'show_formations', $data['Formation']['id']));
+       //die(print_r($data));
+       return $this->redirect(array('action' => 'show_formation', $data['Formation']['id']));
     }
 }
