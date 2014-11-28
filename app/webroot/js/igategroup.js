@@ -2,33 +2,39 @@ $(function () {
     $("#accordion").accordion({
         collapsible: true
     });
-    
-    $(document).on('change', "#filiere_filter", function(ev){
+
+    $(document).on('change', "#filiere_filter", function (ev) {
         ev.preventDefault();
         var id = $(this).val();
-        $.get('formations/formations_list/'+id, function(response) {
+        $.get('formations/formations_list/' + id, function (response) {
             $("#university_training_filter").html(response);
         });
     });
-    
-    $(document).on('change', "#category_filter", function(ev){
+
+    $(document).on('change', "#category_filter", function (ev) {
         ev.preventDefault();
         var id = $(this).val();
-        $.get('trainTopics/list_topics/'+id, function(response) {
+        $.get('trainTopics/list_topics/' + id, function (response) {
             $("#topic_block").html(response);
         });
     });
-    
-    $(document).on('change', "#topic_filter", function(ev){
+
+    $(document).on('change', "#topic_filter", function (ev) {
         ev.preventDefault();
         var id = $(this).val();
-        alert("la valeur de l'id "+id);
-        $.get('trainings/list_trainings/'+id, function(response) {
+        alert("la valeur de l'id " + id);
+        $.get('trainings/list_trainings/' + id, function (response) {
             $("#training_block").html(response);
         });
     });
-    
-    $( "#tabInfoDetails" ).tabs();
+
+    $("#tabInfoDetails").tabs();
+    $('#datepicker').datepicker({
+        format: "dd/mm/yyyy",
+        orientation: "top auto",
+        multidate: false
+    });
+    $("input,textarea").jqBootstrapValidation();
 });
 
 /*

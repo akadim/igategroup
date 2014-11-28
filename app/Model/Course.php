@@ -13,6 +13,5 @@
  */
 class Course {
     //put your code here
-    var $hasMany="Inscription";
     var $belongsTo = "Module";
 }
