@@ -14,6 +14,7 @@
 class StudentsController extends AppController {
 
     public $uses = array('Prospect', 'Enrollement');
+    public $helpers = array('BootstrapForm');
 
     public function signup_prospect($id = null) {
         App::uses('CakeTime', 'Utility');

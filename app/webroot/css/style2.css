@@ -369,3 +369,20 @@ h4
     margin: 20px;
     box-shadow: 1px 1px 10px 0 #aaa;
 }
+
+#tabInfoDetails dl {
+    font-size: 18px;
+}
+
+#tabInfoDetails dl dt {
+    color: #FF7F01;
+}
+
+#tabInfoDetails dl dd {
+    margin-left: 50px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}

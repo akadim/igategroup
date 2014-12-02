@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
    public $components = array('DebugKit.Toolbar', 'Session');
-   public $helpers = array('Form', 'Html', 'Js', 'Time');
+   public $helpers = array('Form', 'Html', 'Js', 'Time', 'BootstrapForm');
    
    public function beforeFilter()
    {

@@ -53,9 +53,9 @@
             var $this = $(el),
               $controlGroup = $this.parents(".control-group").first();
             if (
-              $controlGroup.hasClass("has-warning")
+              $controlGroup.hasClass("warning")
             ) {
-              $controlGroup.removeClass("has-warning").addClass("has-error");
+              $controlGroup.removeClass("warning").addClass("has-error");
               warningsFound++;
             }
           });
@@ -473,7 +473,7 @@
               // Were there any errors?
               if (errorsFound.length) {
                 // Better flag it up as a warning.
-                $controlGroup.removeClass("has-success has-error").addClass("has-warning");
+                $controlGroup.removeClass("success has-error").addClass("warning");
 
                 // How many errors did we find?
                 if (settings.options.semanticallyStrict && errorsFound.length === 1) {
@@ -486,20 +486,20 @@
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 }
               } else {
-                $controlGroup.removeClass("has-warning has-error has-success");
+                $controlGroup.removeClass("warning has-error success");
                 if (value.length > 0) {
-                  $controlGroup.addClass("has-success");
+                  $controlGroup.addClass("success");
                 }
                 $helpBlock.html($helpBlock.data("original-contents"));
               }
 
               if (e.type === "blur") {
-                $controlGroup.removeClass("has-success");
+                $controlGroup.removeClass("success");
               }
             }
           );
           $this.bind("validationLostFocus.validation", function () {
-            $controlGroup.removeClass("has-success");
+            $controlGroup.removeClass("success");
           });
         });
       },

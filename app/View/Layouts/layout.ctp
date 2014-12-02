@@ -7,9 +7,6 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
         <?php echo $this->fetch('css'); ?>
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-        <?php echo $this->fetch('script'); ?>
     </head>
     <body>
 
@@ -66,7 +63,9 @@
                                             <ul>
                                                 <?php foreach ($filieres as $filiere) { ?>
                                                     <li>
-                                                        <?php echo $this->Html->link($filiere['Filiere']['libelle']."<b></b>", array('controller' => 'formations', 'action' => 'show_filiere', $filiere['Filiere']['id']), array('escape' => false)); ; ?>
+                                                        <?php echo $this->Html->link($filiere['Filiere']['libelle'] . "<b></b>", array('controller' => 'formations', 'action' => 'show_filiere', $filiere['Filiere']['id']), array('escape' => false));
+                                                        ;
+                                                        ?>
 
                                                         <div class="submenu2 gradient onecolcol"><h3><?php echo $filiere['Filiere']['libelle']; ?></h3>
                                                             <ul>
@@ -75,13 +74,13 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
                                                                     </li>
-                                                                <?php } ?>      
+    <?php } ?>      
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                <?php } ?>
+<?php } ?>
 
                                             </ul>
                                         </div>
@@ -92,7 +91,7 @@
                                             $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
                                             ?>
                                             <ul>
-                                                <?php foreach ($organizers as $organizer) { ?>
+<?php foreach ($organizers as $organizer) { ?>
                                                     <li>
                                                         <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
 
@@ -103,13 +102,13 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
                                                                     </li>
-                                                                <?php } ?>      
+    <?php } ?>      
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                <?php } ?>
+<?php } ?>
 
                                             </ul>
                                         </div>
@@ -122,7 +121,7 @@
                                             $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
                                             ?>
                                             <ul>
-                                                <?php foreach ($organizers as $organizer) { ?>
+<?php foreach ($organizers as $organizer) { ?>
                                                     <li>
                                                         <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
 
@@ -133,13 +132,13 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
                                                                     </li>
-                                                                <?php } ?>      
+    <?php } ?>      
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                <?php } ?>
+<?php } ?>
 
                                             </ul>
                                         </div>
@@ -150,7 +149,7 @@
                                             $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'filieres'));
                                             ?>
                                             <ul>
-                                                <?php foreach ($filieres as $filiere) { ?>
+<?php foreach ($filieres as $filiere) { ?>
                                                     <li>
                                                         <a href="#"><?php echo $filiere['Filiere']['libelle']; ?><b></b></a>
 
@@ -161,13 +160,13 @@
                                                                 foreach ($formations as $formation) {
                                                                     ?>
                                                                     <li>
-                                                                        <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
                                                                     </li>
-                                                                <?php } ?>      
+    <?php } ?>      
                                                             </ul>
                                                         </div>
                                                     </li>
-                                                <?php } ?>
+<?php } ?>
 
                                             </ul>
                                         </div>
@@ -177,22 +176,145 @@
                             </li>
                             <li class="top-level">
                                 <p>
-                                    <?php echo $this->Html->link('Formation Continue<b></b>', array('controller' => 'trainings', 'action' => 'index'), array('escape' => false)); ?>
+<?php echo $this->Html->link('Formation Continue<b></b>', array('controller' => 'trainings', 'action' => 'index'), array('escape' => false)); ?>
                                 </p>
+                                <div class="submenu gradient">
+
+
+                                    <div class="menuPad">
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>IGATE</h2>
+                                            <?php
+                                            $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'filieres'));
+                                            ?>
+                                            <ul>
+                                                    <?php foreach ($filieres as $filiere) { ?>
+                                                    <li>
+                                                        <?php echo $this->Html->link($filiere['Filiere']['libelle'] . "<b></b>", array('controller' => 'formations', 'action' => 'show_filiere', $filiere['Filiere']['id']), array('escape' => false));
+                                                        ;
+                                                        ?>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $filiere['Filiere']['libelle']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', $filiere['Filiere']['id']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
+                                                                    </li>
+    <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+<?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>Licence</h2>
+                                            <?php
+                                            $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
+                                            ?>
+                                            <ul>
+<?php foreach ($organizers as $organizer) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $organizer['Formation']['organizer']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'licences', $organizer['Formation']['organizer']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    </li>
+    <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+<?php } ?>
+
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>Master</h2>
+                                            <?php
+                                            $organizers = $this->requestAction(array('controller' => 'formations', 'action' => 'organizers'));
+                                            ?>
+                                            <ul>
+<?php foreach ($organizers as $organizer) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $organizer['Formation']['organizer']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $organizer['Formation']['organizer']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'masters', $organizer['Formation']['organizer']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id']), array('escape' => false)); ?>
+                                                                    </li>
+    <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+<?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                        <div id="mosaicHead_pillar" class="columns">
+                                            <h2>IGATE</h2>
+                                            <?php
+                                            $filieres = $this->requestAction(array('controller' => 'formations', 'action' => 'filieres'));
+                                            ?>
+                                            <ul>
+<?php foreach ($filieres as $filiere) { ?>
+                                                    <li>
+                                                        <a href="#"><?php echo $filiere['Filiere']['libelle']; ?><b></b></a>
+
+                                                        <div class="submenu2 gradient onecolcol"><h3><?php echo $filiere['Filiere']['libelle']; ?></h3>
+                                                            <ul>
+                                                                <?php
+                                                                $formations = $this->requestAction(array('controller' => 'formations', 'action' => 'formations', $filiere['Filiere']['id']));
+                                                                foreach ($formations as $formation) {
+                                                                    ?>
+                                                                    <li>
+                                                                    <?php echo $this->Html->link($formation['Formation']['name'], array('controller' => 'formations', 'action' => 'show_formation', $formation['Formation']['id'])); ?>
+                                                                    </li>
+    <?php } ?>      
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+<?php } ?>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </li>
                             <li class="top-level">
                                 <p>
-                                    <?php echo $this->Html->link('Certification<b></b>', array('controller' => 'certifications', 'action' => 'index'), array('escape' => false)); ?>
+<?php echo $this->Html->link('Certification<b></b>', array('controller' => 'certifications', 'action' => 'index'), array('escape' => false)); ?>
                                 </p>
                             </li>
                             <li class="top-level">	
                                 <p>
-                                    <?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?>
+<?php echo $this->Html->link('Contact', array('controller' => 'contacts', 'action' => 'index')); ?>
                                 </p>	
                             </li>	
                             <li class="top-level right_text">	
                                 <p>
-                                    <?php echo $this->Html->link('Connexion', '#', array('id' => "show_connect_form")); ?>
+<?php echo $this->Html->link('Connexion', '#', array('id' => "show_connect_form")); ?>
                                 </p>
                             </li>
                         </ul>
@@ -202,12 +324,13 @@
             <div id="breadCrumb" class="gradient">
                 <div class="menuInner2">	
                     <div class="breadCrumb_left_txt">
-                        <?php 
-                          echo $this->Html->getCrumbs('  >  ', array(
-                                'text' => '<span style="color: red;">Home</span>',
-                                'url' => array('controller' => 'pages', 'action' => 'display', 'home'),
-                                'escape' => false
-                         ));?>
+                        <?php
+                        echo $this->Html->getCrumbs('  >  ', array(
+                            'text' => '<span style="color: red;">Home</span>',
+                            'url' => array('controller' => 'pages', 'action' => 'display', 'home'),
+                            'escape' => false
+                        ));
+                        ?>
                     </div>	
 
                     <!--
@@ -220,15 +343,15 @@
             </div>
         </header>
 
-       <!--
-        <div class="page_body" style="margin-bottom: 15px;">
-            <div class="container" style="padding-left: 110px; padding-right: 110px;">
-                
-            </div>
-        </div>
+        <!--
+         <div class="page_body" style="margin-bottom: 15px;">
+             <div class="container" style="padding-left: 110px; padding-right: 110px;">
+                 
+             </div>
+         </div>
         -->
-        
-        <?php echo $this->fetch('content'); ?>
+
+<?php echo $this->fetch('content'); ?>
 
         <div class="footer">	
 
@@ -238,7 +361,9 @@
                 Tout droits r&eacute;serv&eacute;es <strong>.</strong> IGATE &copy; <?php echo date('Y'); ?>
             </center>
         </div>
-
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<?php echo $this->fetch('script'); ?>
     </body>
 
 </html>

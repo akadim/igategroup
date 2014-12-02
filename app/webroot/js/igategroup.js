@@ -1,4 +1,10 @@
 $(function () {
+    
+   
+    $("form#ProspectSignupProspectForm label").each(function(){
+            $(this).attr('class', 'control-label');    
+    });
+    
     $("#accordion").accordion({
         collapsible: true
     });
@@ -34,7 +40,8 @@ $(function () {
         orientation: "top auto",
         multidate: false
     });
-    $("input,textarea").jqBootstrapValidation();
+    
+    
 });
 
 /*
